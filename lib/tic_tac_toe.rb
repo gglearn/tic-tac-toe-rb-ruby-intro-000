@@ -31,7 +31,7 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  print "Valid move index #{index.to_i}""
+  print "Valid move index #{index.to_i}"
   index.to_i.between?(0,8) && !position_taken?(board, index.to_i-1)
 
   # if index.between?(0,8)
