@@ -10,7 +10,7 @@ WIN_COMBINATIONS = [
 ]
 
 def play(board)
-  while !over?(board)
+  unti over?(board)
     turn(board)
   end
   if won?(board)
