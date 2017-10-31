@@ -89,5 +89,4 @@ def play(board)
   end
   if winner(board) == "X" ? "X Won" : "O Won"
   end
-      
 end
