@@ -33,6 +33,27 @@ def valid_move?(board, index)
   position.to_i.between?(0,8) && !position_taken?(board, position.to_i-1)
 end
 
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index)
+    display_board(board)
+  else
+    turn(board)
+  end
+end
+
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
+end
+
+
+def turn_count(board)
+  board.count{|token| token == "X" || token == "O"}
+end
+
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
   if board[combo[0]] == "X" && board[combo[1]] == "X" && board[combo[2]] == "X" ||
