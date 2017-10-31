@@ -92,7 +92,7 @@ end
 
 
 def play(board)
-  input = gets.strip
+  input = gets
   while over?(board)
     turn(board)
   end
