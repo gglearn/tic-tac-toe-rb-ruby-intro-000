@@ -81,3 +81,13 @@ def winner(board)
       board[won?(board).first]
   end
 end
+
+
+def play(board)
+  until over(board)
+    turn(board)
+  end
+  if winner(board) == "X" ? "X Won" : "O Won"
+  end
+      
+end
