@@ -95,7 +95,7 @@ end
 
 def play(board)
   input = gets
-  until over(board)
+  until over?(board)
     turn(board)
   end
   if winner(board) == "X" ? "X Won" : "O Won"
