@@ -26,13 +26,13 @@ def move(board, index, current_player)
 end
 
 def position_taken?(board, index)
-  puts "board #{board}"
-  puts "index (position_taken) #{index}"
+  # puts "board #{board}"
+  # puts "index (position_taken) #{index}"
   !(board[index].nil? || board[index] == " ")
 end
 
 def valid_move?(board, index)
-  puts "index (valid_move) #{index.to_i}"
+  # puts "index (valid_move) #{index.to_i}"
   index.to_i.between?(0,8) && !position_taken?(board, index.to_i)
 
   # if index.between?(0,8)
