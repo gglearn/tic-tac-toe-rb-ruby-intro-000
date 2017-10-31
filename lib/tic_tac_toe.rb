@@ -43,7 +43,7 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = STDIN.gets.strip
+  input = gets.strip
   index = input_to_index(input)
   puts "Board: #{board}"
   puts "Index: #{index}"
