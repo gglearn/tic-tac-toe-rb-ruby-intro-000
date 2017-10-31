@@ -27,12 +27,12 @@ end
 
 def position_taken?(board, index)
   puts "board #{board}"
-  puts "index #{index}"
+  puts "index (position_taken) #{index}"
   !(board[index].nil? || board[index] == " ")
 end
 
 def valid_move?(board, index)
-  puts "Valid move index #{index.to_i}"
+  puts "index (valid_move) #{index.to_i}"
   index.to_i.between?(0,8) && !position_taken?(board, index.to_i-1)
 
   # if index.between?(0,8)
