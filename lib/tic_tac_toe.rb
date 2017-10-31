@@ -33,7 +33,7 @@ end
 
 def valid_move?(board, index)
   puts "index (valid_move) #{index.to_i}"
-  index.to_i.between?(0,8) && !position_taken?(board, index.to_i-1)
+  index.to_i.between?(0,8) && !position_taken?(board, index.to_i)
 
   # if index.between?(0,8)
   #  if !position_taken?(board, index)
