@@ -48,7 +48,7 @@ def turn(board)
   puts "Board: #{board}"
   puts "Index: #{index}"
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index, current_player(board))
     display_board(board)
   else
     turn(board)
